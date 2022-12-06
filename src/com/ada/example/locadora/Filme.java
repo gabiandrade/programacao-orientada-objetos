@@ -72,10 +72,10 @@ public class Filme {
     public String toString() {
         return "Filme {" +
                 "nome='" + nome + '\'' +
-                ", descricao='" + descricao + '\'' +
+                (descricao != null ? ", descricao='" + descricao + '\'' : "else") +
                 ", genero='" + genero + '\'' +
                 ", indicacaoClassificativa='" + indicacaoClassificativa + '\'' +
-                ", valorLocacao=" + valorLocacao +
+                ", valorLocacao=" + String.format( "%.2f", valorLocacao) +
                 '}';
     }
 }

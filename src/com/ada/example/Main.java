@@ -13,7 +13,7 @@ public class Main {
         Filme mulherMaravilha = new Filme("Mulher Maravilha", "herois", "dc", "10", 7.0);
         Filme harryPotter = new Filme("Harry Potter e a pedra filosofal", 5.0);
         Filme cidadePerdida = new Filme("Cidade Perdida", 9.0);
-        Filme morbius = new Filme("Morbius", 15.50);
+        Filme morbius = new Filme("Morbius", 15.508);
 
         //Exemplo de lista de filmes criada para ser passada no construtor;
         List<Filme> listaFilmes = new ArrayList<>();
