@@ -1,6 +1,7 @@
 package com.ada.example;
 
 import com.ada.example.locadora.Filme;
+import com.ada.example.locadora.GeneroFilme;
 import com.ada.example.locadora.Locadora;
 
 import java.util.ArrayList;
@@ -10,7 +11,8 @@ public class Main {
     public static void main(String[] args) {
 
         Filme panteraNegra = new Filme("Pantera Negra", 7.0);
-        Filme mulherMaravilha = new Filme("Mulher Maravilha", "herois", "dc", "10", 7.0);
+        Filme mulherMaravilha = new Filme("Mulher Maravilha", "herois",
+                GeneroFilme.SUPER_HEROI, "10", 7.0);
         Filme harryPotter = new Filme("Harry Potter e a pedra filosofal", 5.0);
         Filme cidadePerdida = new Filme("Cidade Perdida", 9.0);
         Filme morbius = new Filme("Morbius", 15.508);

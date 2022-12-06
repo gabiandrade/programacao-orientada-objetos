@@ -4,20 +4,20 @@ public class Filme {
 
     private String nome;
     private String descricao;
-    private String genero;
+    private GeneroFilme generoFilme;
     private String indicacaoClassificativa;
     private Double valorLocacao;
 
-    public Filme(String nome, String genero, Double valorLocacao) {
+    public Filme(String nome, GeneroFilme genero, Double valorLocacao) {
         this.nome = nome;
-        this.genero = genero;
+        this.generoFilme = genero;
         this.valorLocacao = valorLocacao;
     }
 
-    public Filme(String nome, String descricao, String genero, String indicacaoClassificativa, Double valorLocacao) {
+    public Filme(String nome, String descricao, GeneroFilme genero, String indicacaoClassificativa, Double valorLocacao) {
         this.nome = nome;
         this.descricao = descricao;
-        this.genero = genero;
+        this.generoFilme = genero;
         this.indicacaoClassificativa = indicacaoClassificativa;
         this.valorLocacao = valorLocacao;
     }
@@ -25,6 +25,14 @@ public class Filme {
     public Filme(String nome, Double valorLocacao) {
         this.nome = nome;
         this.valorLocacao = valorLocacao;
+    }
+
+    public GeneroFilme getGeneroFilme() {
+        return generoFilme;
+    }
+
+    public void setGeneroFilme(GeneroFilme generoFilme) {
+        this.generoFilme = generoFilme;
     }
 
     public String getNome() {
@@ -41,14 +49,6 @@ public class Filme {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
     }
 
     public String getIndicacaoClassificativa() {
@@ -72,8 +72,8 @@ public class Filme {
     public String toString() {
         return "Filme {" +
                 "nome='" + nome + '\'' +
-                (descricao != null ? ", descricao='" + descricao + '\'' : "else") +
-                ", genero='" + genero + '\'' +
+                (descricao != null ? ", descricao='" + descricao + '\'' : "") +
+                ", genero='" + generoFilme + '\'' +
                 ", indicacaoClassificativa='" + indicacaoClassificativa + '\'' +
                 ", valorLocacao=" + String.format( "%.2f", valorLocacao) +
                 '}';
