@@ -16,9 +16,4 @@ public class Gerente extends Funcionario {
         System.out.println("Funcionario contratado!");
     }
 
-
-    @Override
-    public void trabalhar() {
-        System.out.print("O gerente " + nome + " está ocupado!");
-    }
 }
