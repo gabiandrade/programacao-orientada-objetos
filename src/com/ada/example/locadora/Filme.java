@@ -7,6 +7,7 @@ public class Filme {
     private GeneroFilme generoFilme;
     private String indicacaoClassificativa;
     private Double valorLocacao;
+    private String testeAtributo;
 
     public Filme(String nome, GeneroFilme genero, Double valorLocacao) {
         this.nome = nome;
