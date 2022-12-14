@@ -6,10 +6,13 @@ public class Filme {
     private String descricao;
     private GeneroFilme generoFilme;
     private String indicacaoClassificativa;
+    private Double valorLocacao;
+    private String testeAtributo;
 
     public Filme(String nome, GeneroFilme genero, Double valorLocacao) {
         this.nome = nome;
         this.generoFilme = genero;
+        this.valorLocacao = valorLocacao;
     }
 
     public Filme(String nome, String descricao, GeneroFilme genero, String indicacaoClassificativa, Double valorLocacao) {
@@ -17,10 +20,12 @@ public class Filme {
         this.descricao = descricao;
         this.generoFilme = genero;
         this.indicacaoClassificativa = indicacaoClassificativa;
+        this.valorLocacao = valorLocacao;
     }
 
     public Filme(String nome, Double valorLocacao) {
         this.nome = nome;
+        this.valorLocacao = valorLocacao;
     }
 
     public GeneroFilme getGeneroFilme() {
@@ -55,6 +60,14 @@ public class Filme {
         this.indicacaoClassificativa = indicacaoClassificativa;
     }
 
+    public Double getValorLocacao() {
+        return valorLocacao;
+    }
+
+    public void setValorLocacao(Double valorLocacao) {
+        this.valorLocacao = valorLocacao;
+    }
+
 
     @Override
     public String toString() {
@@ -63,6 +76,7 @@ public class Filme {
                 (descricao != null ? ", descricao='" + descricao + '\'' : "") +
                 ", genero='" + generoFilme + '\'' +
                 ", indicacaoClassificativa='" + indicacaoClassificativa + '\'' +
+                ", valorLocacao=" + String.format( "%.2f", valorLocacao) +
                 '}';
     }
 }
